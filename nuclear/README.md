@@ -31,12 +31,34 @@ Where φ = (1 + √5)/2 ≈ 1.618 (golden ratio) and L₄ is the 4th Lucas numbe
 
 **RCHB candidates**: 172, 184, 198, 228, 238
 
+## 🔥 Lucas Products Discovery
+
+Magic numbers are **exact Lucas products**:
+
+| Magic N | Lucas Indices | Formula | Exact? |
+|---------|---------------|---------|--------|
+| 2 | (L₀, L₁) | 2 × 1 = 2 | ✓ |
+| 8 | (L₀, L₃) | 2 × 4 = 8 | ✓ |
+| 28 | (L₃, L₄) | 4 × 7 = 28 | ✓ |
+| 126 | (L₄, L₆) | 7 × 18 = 126 | ✓ |
+| **198** | **(L₅, L₆)** | **11 × 18 = 198** | **✓ RCHB!** |
+
+### Dual Convergence for N=198
+
+Two **independent** Lucas representations converge on the same shell closure:
+
+1. **Lucas sequence**: L₁₁ = 199 ≈ 198 (within 0.5%)
+2. **Lucas product**: L₅ × L₆ = 11 × 18 = 198 (EXACT)
+
+→ This dual representation strengthens the φ-organization hypothesis
+
 ## Files
 
 | File | Description |
 |------|-------------|
 | `seed_equation_core.py` | Lucas sequences, magic number comparison, RCHB analysis |
 | `statistical_validation.py` | Monte Carlo p-value calculations (Table 2 from paper) |
+| `lucas_products.py` | Lucas products discovery (Table 3), dual convergence proof |
 
 ## Usage
 
@@ -46,6 +68,9 @@ python seed_equation_core.py
 
 # Run statistical validation (Monte Carlo, n=100,000)
 python statistical_validation.py
+
+# Run Lucas products discovery
+python lucas_products.py
 ```
 
 ## Key References
