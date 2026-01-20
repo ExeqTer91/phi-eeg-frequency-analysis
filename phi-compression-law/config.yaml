@@ -1,0 +1,50 @@
+dataset:
+  name: CIFAR-10
+  batch_size: 128
+  num_workers: 4
+  augmentation:
+    random_crop: 32
+    padding: 4
+    horizontal_flip: true
+
+training:
+  epochs: 50
+  optimizer: SGD
+  momentum: 0.9
+  scheduler: cosine
+
+hyperparameters:
+  learning_rates: [0.1, 0.05, 0.01]
+  seeds: [42, 123, 456, 789, 1000, 2024]
+
+architectures:
+  - name: SimpleCNN
+    standard_widths: [32, 64, 128]
+    lucas_widths: [29, 47, 76]
+    fibonacci_widths: [34, 55, 89]
+  
+  - name: ResNet18
+    standard_widths: [64, 128, 256, 512]
+    lucas_widths: [47, 76, 123, 199]
+    fibonacci_widths: [55, 89, 144, 233]
+  
+  - name: ConvNeXt
+    standard_widths: [96, 192, 384, 768]
+    lucas_widths: [76, 123, 199, 322]
+    fibonacci_widths: [89, 144, 233, 377]
+  
+  - name: ViT
+    standard_embed_dim: 192
+    lucas_embed_dim: 123
+    num_heads: 3
+    num_layers: 6
+    patch_size: 4
+  
+  - name: PhiTransformer
+    embed_dims: [123, 123, 199, 199, 322, 322]
+    num_heads: [4, 4, 7, 7, 11, 11]
+    patch_size: 4
+
+output:
+  results_dir: results/
+  save_checkpoints: false
