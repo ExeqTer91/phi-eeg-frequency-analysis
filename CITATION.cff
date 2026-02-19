@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper."
+title: "Golden Ratio Organization in Human EEG: Analysis Code"
+authors:
+  - family-names: Ursachi
+    given-names: Andrei
+    orcid: "https://orcid.org/0009-0002-6114-5011"
+doi: "10.3389/fnhum.2026.1781338"
+date-released: "2026-02-19"
+url: "https://github.com/ExeqTer91/eeg-phi-coupling"
+license: MIT
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Ursachi
+      given-names: Andrei
+  title: "Golden Ratio Organization in Human EEG is Associated with Theta-Alpha Frequency Convergence: A Multi-Dataset Validation Study"
+  journal: "Frontiers in Human Neuroscience"
+  year: 2026
+  volume: 20
+  doi: "10.3389/fnhum.2026.1781338"
